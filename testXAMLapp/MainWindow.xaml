@@ -1,0 +1,41 @@
+﻿<Window x:Class="testXAMLapp.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:testXAMLapp"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="800" Width="1300">
+    <Grid>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="25"/>
+                <RowDefinition/>
+                <RowDefinition Height="5"/>
+                <RowDefinition Height="200"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition Width="5"/>
+                <ColumnDefinition Width="500"/>
+            </Grid.ColumnDefinitions>
+
+            <Menu Height="25" Grid.ColumnSpan="5" VerticalAlignment="Top">
+                <MenuItem Header="File" Height="25" Width="66"/>
+            </Menu>
+
+            <TextBox Margin="0" Text="\documentclass[12pt]{article}&#xA;\usepackage[utf8]{inputenc}&#xA;\usepackage[margin=.75in]{geometry}&#xA;\usepackage{tikz}&#xA;&#xA;\usetikzlibrary{automata,positioning}&#xA;&#xA;&#xA;\begin{document}&#xA;&#xA;\begin{tikzpicture}[shorten &gt;=1pt,node distance=2cm,on grid,auto] &#xA;    \node[state,initial] (q_0)   {$q_0$}; &#xA;    \node[state] (q_1) [right=of q_0] {$q_1$}; &#xA;    \node[state] (q_2) [right=of q_1] {$q_2$}; &#xA;    \node[state,accepting](q_3) [below right=of q_1] {$q_3$};&#xA;     \path[-&gt;] &#xA;     (q_0) edge  node {0} (q_1)&#xA;     (q_1) edge  node  {1} (q_3)&#xA;           edge  node  {1} (q_2)&#xA;           edge [loop above] node {0} ()&#xA;     (q_2) edge  node [swap] {0} (q_3);&#xA;           &#xA; \end{tikzpicture}&#xA;&#xA;\end{document}&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;dfdsfsdfd" FontFamily="Fira Code" FontSize="14" Cursor="IBeam" AcceptsReturn="True" VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto" TextChanged="TextBox_TextChanged" Grid.Row="1"/>
+            <GridSplitter Grid.Column="1" HorizontalAlignment="Stretch" Width="5" Margin="0" Background="#FFA42727" Foreground="#FFE6D6D6" BorderBrush="#FF2E2A2A" Grid.Row="1"/>
+            <Image Grid.Column="2" Source="4Pp7dRg.jpg" Stretch="UniformToFill" Grid.Row="1"/>
+            <GridSplitter Height="5" Margin="0" Grid.Row="2" VerticalAlignment="Top" Background="#FF1B5C7A" Cursor="SizeNS" ResizeDirection="Rows" HorizontalAlignment="Stretch" Grid.ColumnSpan="3"/>
+
+
+
+
+        </Grid>
+
+
+
+
+    </Grid>
+</Window>
